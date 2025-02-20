@@ -82,8 +82,8 @@ function CaseStudies({
           Discover how our tailored solutions have empowered clients to achieve operational excellence and sustainable growth.
         </p>
       </SectionIntro>
-      <Container className="mt-16">
-        {/* <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      {/* <Container className="mt-16">
+        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
               <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
@@ -119,8 +119,8 @@ function CaseStudies({
               </article>
             </FadeIn>
           ))}
-        </FadeInStagger> */}
-      </Container>
+        </FadeInStagger>
+      </Container> */}
     </>
   )
 }
