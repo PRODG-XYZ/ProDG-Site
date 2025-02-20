@@ -74,14 +74,14 @@ function CaseStudies({
 }) {
   return (
     <>
-      {/* <SectionIntro
+      <SectionIntro
         title="Transforming Vision into Reality"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
           Discover how our tailored solutions have empowered clients to achieve operational excellence and sustainable growth.
         </p>
-      </SectionIntro> */}
+      </SectionIntro>
       <Container className="mt-16">
         {/* <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
@@ -194,14 +194,14 @@ export default async function Home() {
 
       <CaseStudies caseStudies={caseStudies} />
 
-      {/* <Testimonial
+      <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Dealfuze', logo: logoPhobiaDark }}
       >
         The team at ProDG Studio went above and beyond with our onboarding, even
         finding a way to access the user's microphone without triggering one of
         those annoying permission dialogs.
-      </Testimonial> */}
+      </Testimonial>
 
       <Services />
 
