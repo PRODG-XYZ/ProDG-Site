@@ -1,3 +1,5 @@
+//404 page
+
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'

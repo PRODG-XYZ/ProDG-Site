@@ -1,3 +1,5 @@
+//RootLayout component
+
 'use client'
 
 import {

@@ -1,3 +1,5 @@
+//Home page
+
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -38,12 +40,16 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            <span className="block mb-3">Our Esteemed Global Partners</span>
+            <div className="h-px w-full bg-neutral-800 mb-3" />
+            <span className="block ml-4 font-semibold">
+              Proudly collaborating with innovative organizations and governmental institutions, our client network spans continents—connecting visionaries and industry leaders.
+            </span>
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
-          <ul
+          {/* <ul
             role="list"
             className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
           >
@@ -54,7 +60,7 @@ function Clients() {
                 </FadeIn>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </FadeInStagger>
       </Container>
     </div>
@@ -68,18 +74,16 @@ function CaseStudies({
 }) {
   return (
     <>
-      <SectionIntro
-        title="Harnessing technology for a brighter future"
+      {/* <SectionIntro
+        title="Transforming Vision into Reality"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          Discover how our tailored solutions have empowered clients to achieve operational excellence and sustainable growth.
         </p>
-      </SectionIntro>
+      </SectionIntro> */}
       <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        {/* <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
               <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
@@ -115,7 +119,7 @@ function CaseStudies({
               </article>
             </FadeIn>
           ))}
-        </FadeInStagger>
+        </FadeInStagger> */}
       </Container>
     </>
   )
@@ -130,9 +134,8 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
-        </p>
+    From bespoke software development and digital innovation to strategic consultancy and venture incubation, we deliver integrated solutions that accelerate business success.
+ </p>
       </SectionIntro>
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
@@ -146,24 +149,17 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="Ideation & Conceptualization">
+            We ignite the product lifecycle by uncovering untapped market opportunities and refining bold ideas into actionable blueprints. 
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Bespoke Software & Digital Solutions">
+            We craft compelling websites and custom applications that elevate your digital presence and streamline operations.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Strategic Consultancy & Business Support">
+              Our tailored insights and hands-on support optimize performance and help you overcome complex challenges.
             </ListItem>
-            <ListItem title="Custom content management">
-              At ProDG we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Venture Incubation & Innovation">
+              We nurture high-potential startups with expert guidance and global connections, turning bold ideas into market-leading ventures.
             </ListItem>
           </List>
         </div>
@@ -173,8 +169,9 @@ function Services() {
 }
 
 export const metadata: Metadata = {
+  title: 'ProDG Studio: Pioneering Digital Innovation',
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Empowering businesses through bespoke software, strategic consultancy, and tailored business support across a global network.',
 }
 
 export default async function Home() {
@@ -185,12 +182,10 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio.
+            ProDG Studio: Empowering Global Transformation
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            We combine advanced software development, strategic insights, and comprehensive business support to drive digital transformation and venture success for leading organizations around the world.
           </p>
         </FadeIn>
       </Container>
@@ -199,14 +194,14 @@ export default async function Home() {
 
       <CaseStudies caseStudies={caseStudies} />
 
-      <Testimonial
+      {/* <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'Dealfuze', logo: logoPhobiaDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
+        The team at ProDG Studio went above and beyond with our onboarding, even
+        finding a way to access the user's microphone without triggering one of
         those annoying permission dialogs.
-      </Testimonial>
+      </Testimonial> */}
 
       <Services />
 

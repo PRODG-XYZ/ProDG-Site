@@ -1,3 +1,5 @@
+//GridPattern component
+
 'use client'
 
 import { useEffect, useId, useRef, useState } from 'react'

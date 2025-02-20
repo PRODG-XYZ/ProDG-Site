@@ -1,3 +1,5 @@
+//Offices component
+
 import clsx from 'clsx'
 
 function Office({
@@ -32,17 +34,24 @@ export function Offices({
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Copenhagen" invert={invert}>
-          1 Carlsberg Gate
+        <Office name="London" invert={invert}>
+          128 City Road
           <br />
-          1260, København, Denmark
+          EC1V 2NX, London, UK
         </Office>
       </li>
       <li>
-        <Office name="Billund" invert={invert}>
-          24 Lego Allé
+        <Office name="Nairobi" invert={invert}>
+          Vienna Court, 
           <br />
-          7190, Billund, Denmark
+          State House Cres, Nairobi, Kenya
+        </Office>
+      </li>
+      <li>
+        <Office name="Abuja" invert={invert}>
+          River Benue Street, 
+          <br />
+          Maitama, Abuja, Nigeria
         </Office>
       </li>
     </ul>

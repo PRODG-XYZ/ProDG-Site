@@ -1,3 +1,5 @@
+//MDX components
+
 import clsx from 'clsx'
 
 import { Blockquote } from '@/components/Blockquote'

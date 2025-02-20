@@ -1,3 +1,5 @@
+//Contact page
+
 import { useId } from 'react'
 import { type Metadata } from 'next'
 import Link from 'next/link'
@@ -86,7 +88,7 @@ function ContactForm() {
           </div>
         </div>
         <Button type="submit" className="mt-10">
-          Let’s work together
+          Let's work together
         </Button>
       </form>
     </FadeIn>
@@ -100,8 +102,7 @@ function ContactDetails() {
         Our offices
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
+        Prefer doing things <span className="font-semibold">in person?</span> Visit our headquarters in London or connect with our regional offices around the world.
       </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
@@ -112,8 +113,8 @@ function ContactDetails() {
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
+            ['Careers', 'careers@prodg.xyz'],
+            ['Press', 'press@prodg.xyz'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
@@ -141,15 +142,15 @@ function ContactDetails() {
 }
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
+  title: 'Contact ProDG Studio',
+  description: 'Partner with us to drive digital transformation and venture success. Reach out for a free consultation today.',
 }
 
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      <PageIntro eyebrow="Contact us" title="Partner with ProDG Studio">
+        <p>Connect with our global network of experts to explore bespoke digital solutions and strategic consultancy designed to propel your business forward. Get in touch for your free consultation.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
