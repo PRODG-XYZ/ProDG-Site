@@ -1,3 +1,5 @@
+//SectionIntro component
+
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'

@@ -1,3 +1,5 @@
+//TagList component
+
 import clsx from 'clsx'
 
 export function TagList({

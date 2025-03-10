@@ -1,3 +1,5 @@
+//Work page
+
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -112,7 +114,7 @@ function Clients() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
+          You're in good company
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
@@ -137,9 +139,9 @@ function Clients() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Work',
+  title: 'Our Impact',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Explore case studies that showcase how ProDG Studio drives digital innovation and delivers transformative solutions for global clients.',
 }
 
 export default async function Work() {
@@ -148,27 +150,25 @@ export default async function Work() {
   return (
     <>
       <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        eyebrow="Our Work"
+        title="Transforming Vision into Reality"
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          At ProDG Studio, we deliver results through a unique blend of technological expertise and strategic insight. Our case studies illustrate how we empower organizations to achieve excellence and sustainable growth.
         </p>
       </PageIntro>
 
-      <CaseStudies caseStudies={caseStudies} />
+      {/* <CaseStudies caseStudies={caseStudies} /> */}
 
-      <Testimonial
+      {/* <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
+        We approached <em>ProDG Studio</em> because we loved their past work. They
         delivered something remarkably similar in record time.
       </Testimonial>
 
-      <Clients />
+      <Clients /> */}
 
       <ContactSection />
     </>

@@ -1,3 +1,5 @@
+//StatList component
+
 import { Border } from '@/components/Border'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 

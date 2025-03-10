@@ -1,3 +1,5 @@
+//Layout
+
 import { type Metadata } from 'next'
 
 import { RootLayout } from '@/components/RootLayout'
@@ -6,8 +8,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'ProDG - Nurturing talent and fostering innovation.',
+    template: '%s - ProDG Studio',
+    default: 'ProDG Studio - Where Bold Ideas Become Global Ventures.',
   },
 }
 

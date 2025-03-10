@@ -1,3 +1,5 @@
+//FadeIn component
+
 'use client'
 
 import { createContext, useContext } from 'react'
