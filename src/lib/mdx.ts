@@ -1,3 +1,5 @@
+//MDX library
+
 import { type ImageProps } from 'next/image'
 import glob from 'fast-glob'
 

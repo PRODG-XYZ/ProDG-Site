@@ -1,3 +1,5 @@
+//Format date
+
 export function formatDate(dateString: string) {
   let parts = dateString.split('-')
   let hasDay = parts.length > 2

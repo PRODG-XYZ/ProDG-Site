@@ -1,3 +1,5 @@
+//Work page
+
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,14 +12,9 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import logoDealFuze from '@/images/clients/dealfuze/logo.svg'
+import logoRenda from '@/images/clients/renda/logo.svg'
+import logoCommunityWolf from '@/images/clients/community-wolf/logo.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -97,14 +94,9 @@ function CaseStudies({
 }
 
 const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['DealFuze', logoDealFuze],
+  ['Renda', logoRenda],
+  ['Community Wolf', logoCommunityWolf],
 ]
 
 function Clients() {
@@ -112,19 +104,19 @@ function Clients() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
+          Trusted by Leading Organizations
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
         <Border as={FadeIn} />
         <ul
           role="list"
-          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
+          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-3"
         >
           {clients.map(([client, logo]) => (
             <li key={client} className="group">
               <FadeIn className="overflow-hidden">
-                <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px">
+                <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px">
                   <Image src={logo} alt={client} unoptimized />
                 </Border>
               </FadeIn>
@@ -137,9 +129,9 @@ function Clients() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Work',
+  title: 'Our Impact',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Explore case studies that showcase how ProDG Studio drives digital innovation and delivers transformative solutions for global clients.',
 }
 
 export default async function Work() {
@@ -148,13 +140,11 @@ export default async function Work() {
   return (
     <>
       <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
+        eyebrow="Our Work"
+        title="Transforming Vision into Reality"
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          At ProDG Studio, we deliver results through a unique blend of technological expertise and strategic insight. Our case studies illustrate how we empower organizations to achieve excellence and sustainable growth.
         </p>
       </PageIntro>
 
@@ -162,10 +152,9 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
+        client={{ name: 'DealFuze', logo: logoDealFuze }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        The ProDG team delivered an exceptional AI solution that transformed our matching process. Their technical expertise and innovative approach helped us create a platform that truly understands the nuances of investor-founder relationships.
       </Testimonial>
 
       <Clients />

@@ -1,0 +1,59 @@
+import logo from '@/images/clients/community-wolf/logo.svg'
+import imageHero from './hero.jpg'
+import imageMichaelHoughton from './michael.jpg'
+
+export const caseStudy = {
+  client: 'Community Wolf',
+  title: 'AI-powered crime reporting and security coordination',
+  description:
+    'Empowering communities through AI-driven security solutions — Community Wolf transforms WhatsApp into a powerful crime reporting and coordination platform for citizens and security firms.',
+  summary: [
+    'South Africa has one of the world\'s highest crime rates, with thousands of incidents left unreported. Community Wolf is an AI-powered WhatsApp chat interface that encourages reporting and keeps communities informed with local crime alerts.',
+    'Working with Community Wolf, we deployed AI-driven WhatsApp group agents that listen to conversations to record crime, staff management reports, and alarm activations in real-time, streamlining incident response for security firms and citizens.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2023-07',
+  service: 'AI Integration, WhatsApp API Development',
+  testimonial: {
+    author: { name: 'Michael Houghton', role: 'Co-founder of Community Wolf' },
+    content:
+      'The team at Studio transformed our vision into reality. Their expertise in AI and messaging integration helped us create a solution that genuinely improves community safety and security firm operations.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+South Africa has one of the world's highest crime rates, with thousands of these incidents being left unreported. This is where Community Wolf comes in- an AI-powered WhatsApp chat interface that encourages reporting and keeps communities informed with local crime alerts. The founders of Community Wolf saw the product's potential in empowering the underserved security industry, where firms rely on WhatsApp to coordinate across hundreds of group chats and messages. Seeing an opportunity to solve this challenge, they approached us to partner on Enterprise Wolf: a suite of WhatsApp and AI-driven solutions tailored for security firms.
+
+Working together with the startup, we have deployed the first stage of the enterprise solutions– group agents that listen into WhatsApp group conversations to record crime, staff management reports, alarm activations and other incidents in real-time. The agents extract the relevant data and trigger several upstream pipelines such as alerting citizens and notifying local security firms to streamline incident response. As we continue to refine and expand Enterprise Wolf, our goal is to transform how security firms operate by leveraging AI and WhatsApp to create a smarter, more responsive network that improves safety and efficiency across communities.
+
+## What we did
+
+<TagList>
+  <TagListItem>AWS Lambdas (AI functions)</TagListItem>
+  <TagListItem>ExpressJS backend server</TagListItem>
+  <TagListItem>WhatsApp websockets</TagListItem>
+  <TagListItem>AI Data Processing</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Michael Houghton', role: 'Co-founder of Community Wolf' }}
+  image={{ src: imageMichaelHoughton }}
+>
+  The team at Studio transformed our vision into reality. Their expertise in AI 
+  and messaging integration helped us create a solution that genuinely improves 
+  community safety and security firm operations.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="40%" label="Increase in reported incidents" />
+  <StatListItem value="66%" label="Faster response time" />
+  <StatListItem value="85%" label="Data extraction accuracy" />
+  <StatListItem value="12" label="Security firms onboarded" />
+</StatList>

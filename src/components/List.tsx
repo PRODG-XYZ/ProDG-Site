@@ -1,3 +1,5 @@
+//List component
+
 import clsx from 'clsx'
 
 import { Border } from '@/components/Border'

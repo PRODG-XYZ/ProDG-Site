@@ -1,3 +1,5 @@
+//Logo component
+
 import { useId } from 'react'
 import clsx from 'clsx'
 

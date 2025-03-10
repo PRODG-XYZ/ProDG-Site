@@ -1,3 +1,5 @@
+//Blog page
+
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,9 +14,9 @@ import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Insights & Innovations',
   description:
-    'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
+    'Stay informed with expert insights, industry trends, and thought leadership on digital transformation and venture growth.',
 }
 
 export default async function Blog() {
@@ -22,10 +24,9 @@ export default async function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro eyebrow="Blog" title="Insights & Innovations">
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+          Explore our latest articles and analyses where technology meets strategy. Our expert team shares in-depth insights on emerging trends, digital disruption, and the future of business.
         </p>
       </PageIntro>
 

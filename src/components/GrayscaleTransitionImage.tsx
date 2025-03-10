@@ -1,3 +1,5 @@
+//GrayscaleTransitionImage component
+
 'use client'
 
 import { useRef } from 'react'
