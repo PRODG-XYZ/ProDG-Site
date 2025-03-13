@@ -17,6 +17,36 @@ pnpm run dev
 
 Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
+## Supabase Integration
+
+The contact form is integrated with [Supabase](https://supabase.com) to store form submissions. To set up this integration:
+
+1. Create a Supabase account and project
+2. Create a table named `contact_submissions`:
+   - You can manually create the table following the structure below, or
+   - Use the SQL script provided in `src/db/contact_submissions.sql` by copying and pasting it into the Supabase SQL editor
+
+   Required table structure:
+   - `id`: uuid (primary key)
+   - `name`: text (not null)
+   - `email`: text (not null)
+   - `company`: text
+   - `phone`: text
+   - `message`: text (not null)
+   - `budget`: text
+   - `created_at`: timestamp with time zone (default: now())
+
+3. Copy your Supabase project URL and anon key to the `.env.local` file:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-project-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+   ```
+
+4. The SQL script also sets up appropriate Row Level Security (RLS) policies to:
+   - Allow anonymous form submissions
+   - Restrict data access to authenticated administrators only
+   - Create useful indexes for better performance
+
 ## Customizing
 
 You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.

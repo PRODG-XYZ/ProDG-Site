@@ -12,9 +12,16 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
+import { LogoCarousel } from '@/components/ui/logo-carousel'
 import logoDealFuze from '@/images/clients/dealfuze/logo.svg'
 import logoRenda from '@/images/clients/renda/logo.svg'
 import logoCommunityWolf from '@/images/clients/community-wolf/logo.svg'
+import logoCommunityWolfW from '@/images/clients/community-wolf/LogoW.svg'
+import logoKenyaParliament from '@/images/clients/kenya-parliament/Kenya Coat of Arms Official.svg'
+import logoMsingi from '@/images/clients/Msingi/Logo.svg'
+import logoWordAndLearn from '@/images/clients/wordandlearn/WordandLearn Logo.svg'
+import logoNigeria from '@/images/clients/nigeria/Coat of Arms Nigeria.svg'
+import logoStorefront from '@/images/clients/Storefront/Logo.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -93,10 +100,15 @@ function CaseStudies({
   )
 }
 
-const clients = [
-  ['DealFuze', logoDealFuze],
-  ['Renda', logoRenda],
-  ['Community Wolf', logoCommunityWolf],
+const clientLogos = [
+  { name: 'DealFuze', id: 1, src: logoDealFuze },
+  { name: 'Renda', id: 2, src: logoRenda },
+  { name: 'Community Wolf', id: 3, src: logoCommunityWolfW },
+  { name: 'Kenya Parliament', id: 5, src: logoKenyaParliament },
+  { name: 'Msingi', id: 6, src: logoMsingi },
+  { name: 'Word and Learn', id: 7, src: logoWordAndLearn },
+  { name: 'Nigeria', id: 8, src: logoNigeria },
+  { name: 'Storefront', id: 9, src: logoStorefront }
 ]
 
 function Clients() {
@@ -107,23 +119,9 @@ function Clients() {
           Trusted by Leading Organizations
         </h2>
       </FadeIn>
-      <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
-        <ul
-          role="list"
-          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-3"
-        >
-          {clients.map(([client, logo]) => (
-            <li key={client} className="group">
-              <FadeIn className="overflow-hidden">
-                <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
-                </Border>
-              </FadeIn>
-            </li>
-          ))}
-        </ul>
-      </FadeInStagger>
+      <div className="mt-10">
+        <LogoCarousel logos={clientLogos} columnCount={4} />
+      </div>
     </Container>
   )
 }
