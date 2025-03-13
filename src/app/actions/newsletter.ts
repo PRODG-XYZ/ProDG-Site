@@ -2,12 +2,18 @@
 
 import { supabase } from '@/lib/supabase';
 
+type NewsletterResponse = {
+  success: boolean;
+  message?: string;
+  error?: string;
+};
+
 /**
  * Handles newsletter subscription requests
  * @param formData Form data containing the email address
  * @returns Object indicating success or failure with a message
  */
-export async function subscribeToNewsletter(formData: FormData) {
+export async function subscribeToNewsletter(formData: FormData): Promise<NewsletterResponse> {
   try {
     const email = formData.get('email') as string;
 

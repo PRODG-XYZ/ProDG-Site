@@ -39,7 +39,7 @@ export function NewsletterForm() {
         setFormState({ 
           pending: false, 
           success: true, 
-          message: result.message, 
+          message: result.message || "Thank you for subscribing to our newsletter!", 
           error: null 
         });
         // Reset form
