@@ -19,6 +19,8 @@ Finally, open [http://localhost:3000](http://localhost:3000) in your browser to 
 
 ## Supabase Integration
 
+### Contact Form
+
 The contact form is integrated with [Supabase](https://supabase.com) to store form submissions. To set up this integration:
 
 1. Create a Supabase account and project
@@ -46,6 +48,31 @@ The contact form is integrated with [Supabase](https://supabase.com) to store fo
    - Allow anonymous form submissions
    - Restrict data access to authenticated administrators only
    - Create useful indexes for better performance
+
+### Newsletter Subscription
+
+The newsletter subscription form in the footer is also integrated with Supabase:
+
+1. Create a table named `newsletter_subscribers`:
+   - Use the SQL script provided in `src/db/newsletter_subscribers.sql` by copying and pasting it into the Supabase SQL editor
+
+   Table structure:
+   - `id`: uuid (primary key)
+   - `email`: text (not null, unique)
+   - `subscribed_at`: timestamp with time zone (default: now())
+   - `unsubscribed_at`: timestamp with time zone (null by default)
+   - `is_active`: boolean (default: true)
+
+2. The newsletter functionality includes:
+   - Email validation
+   - Duplicate subscription prevention
+   - Success/error messaging
+   - Loading state feedback
+
+3. The SQL script sets up appropriate Row Level Security (RLS) policies to:
+   - Allow anonymous subscriptions
+   - Restrict data access to administrators only
+   - Create indexes for performance optimization
 
 ## Customizing
 

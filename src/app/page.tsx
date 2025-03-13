@@ -298,7 +298,7 @@ export default async function Home() {
 
   return (
     <>
-      <ProDGIntro />4
+      <ProDGIntro />
       <Clients />
 
       <CaseStudies caseStudies={caseStudies} />
