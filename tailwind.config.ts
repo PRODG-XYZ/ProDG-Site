@@ -91,7 +91,7 @@ export default {
                         ...defaultTheme.fontFamily.sans
                     ],
   				{
-  					fontVariationSettings: 'wdth" 125'
+  					fontVariationSettings: '"wdth" 125'
   				}
   			]
   		},
