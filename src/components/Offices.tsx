@@ -9,21 +9,21 @@ const officeLocations = [
     country: 'United Kingdom',
     address: '128 City Road, EC1V 2NX, London, UK',
     phone: '+44 20 1234 5678',
-    email: 'london@prodgstudio.com',
+    email: 'london@prodg.xyz',
   },
   {
     city: 'Nairobi',
     country: 'Kenya',
     address: 'Vienna Court, State House Cres, Nairobi, Kenya',
     phone: '+254 20 8765 4321',
-    email: 'nairobi@prodgstudio.com',
+    email: 'nairobi@prodg.xyz',
   },
   {
     city: 'Abuja',
     country: 'Nigeria',
     address: 'River Benue Street, Maitama, Abuja, Nigeria',
     phone: '+234 90 1234 5678',
-    email: 'abuja@prodgstudio.com',
+    email: 'abuja@prodg.xyz',
   },
 ]
 

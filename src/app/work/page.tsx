@@ -22,6 +22,7 @@ import logoMsingi from '@/images/clients/Msingi/Logo.svg'
 import logoWordAndLearn from '@/images/clients/wordandlearn/WordandLearn Logo.svg'
 import logoNigeria from '@/images/clients/nigeria/Coat of Arms Nigeria.svg'
 import logoStorefront from '@/images/clients/Storefront/Logo.svg'
+import logoBaobab from '@/images/clients/baobab/logo.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -104,6 +105,7 @@ const clientLogos = [
   { name: 'DealFuze', id: 1, src: logoDealFuze },
   { name: 'Renda', id: 2, src: logoRenda },
   { name: 'Community Wolf', id: 3, src: logoCommunityWolfW },
+  { name: 'Baobab', id: 4, src: logoBaobab },
   { name: 'Kenya Parliament', id: 5, src: logoKenyaParliament },
   { name: 'Msingi', id: 6, src: logoMsingi },
   { name: 'Word and Learn', id: 7, src: logoWordAndLearn },

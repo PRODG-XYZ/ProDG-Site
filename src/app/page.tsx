@@ -13,6 +13,9 @@ import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import { LogoCarousel } from '@/components/ui/logo-carousel'
 import { WorldMap } from '@/components/ui/world-map'
+import { Accordion } from '@/components/ui/accordion'
+import { ProgressiveBlur } from '@/components/ui/progressive-blur'
+import { ClientLogosDisplay } from '@/components/ClientLogos'
 import logoDealFuze from '@/images/clients/dealfuze/logo.svg'
 import logoRenda from '@/images/clients/renda/logo.svg'
 import logoCommunityWolf from '@/images/clients/community-wolf/logo.svg'
@@ -22,22 +25,25 @@ import logoMsingi from '@/images/clients/Msingi/Logo.svg'
 import logoWordAndLearn from '@/images/clients/wordandlearn/WordandLearn Logo.svg'
 import logoNigeria from '@/images/clients/nigeria/Coat of Arms Nigeria.svg'
 import logoStorefront from '@/images/clients/Storefront/Logo.svg'
+import logoBaobab from '@/images/clients/baobab/logo.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
 import imageMohamed from '@/app/work/deal-fuze/mohamed-hassan-al-sheraie.jpg'
 import imageMichael from '@/app/work/CommunityWolf/michael-houghton.jpg'
 import imageTom from '@/app/work/renda/tom-fairburn.jpg'
+import imageToby from '@/app/work/baobab/toby-hanington.jpg'
 
 const clientLogos = [
   { name: 'DealFuze', id: 1, src: logoDealFuze },
   { name: 'Renda', id: 2, src: logoRenda },
   { name: 'Community Wolf', id: 3, src: logoCommunityWolfW },
-  { name: 'Kenya Parliament', id: 4, src: logoKenyaParliament },
-  { name: 'Msingi', id: 5, src: logoMsingi },
-  { name: 'Word and Learn', id: 6, src: logoWordAndLearn },
-  { name: 'Nigeria', id: 7, src: logoNigeria },
-  { name: 'Storefront', id: 8, src: logoStorefront }
+  { name: 'Baobab', id: 4, src: logoBaobab },
+  { name: 'Kenya Parliament', id: 5, src: logoKenyaParliament },
+  { name: 'Msingi', id: 6, src: logoMsingi },
+  { name: 'Word and Learn', id: 7, src: logoWordAndLearn },
+  { name: 'Nigeria', id: 8, src: logoNigeria },
+  { name: 'Storefront', id: 9, src: logoStorefront }
 ]
 
 // Define global connection dots for the WorldMap
@@ -96,8 +102,8 @@ function Clients() {
           </div>
         </FadeIn>
 
-        <div className="mt-12">
-          <LogoCarousel logos={clientLogos} columnCount={4} />
+        <div className="mt-12 relative">
+          <ClientLogosDisplay logos={clientLogos} layout="scroll" />
         </div>
       </Container>
     </div>
@@ -109,8 +115,11 @@ function ProDGIntro() {
     <Container className="mt-24 sm:mt-32 md:mt-56">
       <FadeIn>
         <div className="mx-auto max-w-4xl">
-          <h2 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            ProDG Studio: Empowering Global Transformation
+          <h1 className="font-display text-6xl font-bold tracking-tight text-neutral-950 [text-wrap:balance] sm:text-8xl">
+            ProDG Studio
+          </h1>
+          <h2 className="mt-6 font-display text-3xl font-medium tracking-tight text-neutral-800 [text-wrap:balance] sm:text-4xl">
+            Empowering Global Transformation
           </h2>
           <p className="mt-6 text-xl text-neutral-600 leading-relaxed">
             We combine advanced software development, strategic insights, and comprehensive business support to drive digital transformation and venture success for leading organizations around the world.
@@ -196,11 +205,11 @@ function TestimonialsSection({
 }: {
   caseStudies: Array<MDXEntry<CaseStudy>>
 }) {
-  // Create a mapping of author names to their images
   const authorImageMap: Record<string, any> = {
     'Mohamed Hassan Al Sheraie': imageMohamed,
     'Michael Houghton': imageMichael,
     'Tom Fairburn': imageTom,
+    'Toby Hanington': imageToby,
   };
 
   // Transform case studies into the format expected by AnimatedTestimonials
@@ -237,6 +246,49 @@ function TestimonialsSection({
 }
 
 function Services() {
+  const serviceItems = [
+    {
+      title: "Ideation & Conceptualization",
+      content: (
+        <p className="text-neutral-600">
+          We ignite your product lifecycle by uncovering untapped market opportunities
+          and refining bold ideas into actionable blueprints — laying the groundwork for
+          breakthrough solutions.
+        </p>
+      )
+    },
+    {
+      title: "Bespoke Software & Digital Solutions",
+      content: (
+        <p className="text-neutral-600">
+          Our expert team crafts compelling websites, custom applications, and robust
+          digital platforms that elevate your brand, streamline operations, and keep you
+          ahead of the competition.
+        </p>
+      )
+    },
+    {
+      title: "Strategic Consultancy & Business Support",
+      content: (
+        <p className="text-neutral-600">
+          Through tailored insights and hands-on guidance, we optimize performance,
+          solve complex challenges, and help you build a resilient roadmap for
+          sustainable growth.
+        </p>
+      )
+    },
+    {
+      title: "Venture Incubation & Innovation",
+      content: (
+        <p className="text-neutral-600">
+          We nurture high-potential startups with expert mentorship, global
+          connections, and access to cutting-edge resources — transforming ambitious
+          visions into market-leading ventures.
+        </p>
+      )
+    }
+  ];
+
   return (
     <>
       <SectionIntro
@@ -245,8 +297,8 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-    From bespoke software development and digital innovation to strategic consultancy and venture incubation, we deliver integrated solutions that accelerate business success.
- </p>
+          From bespoke software development and digital innovation to strategic consultancy and venture incubation, we deliver integrated solutions that accelerate business success.
+        </p>
       </SectionIntro>
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
@@ -259,28 +311,15 @@ function Services() {
               />
             </FadeIn>
           </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Ideation & Conceptualization">
-            We ignite your product lifecycle by uncovering untapped market opportunities
-and refining bold ideas into actionable blueprints — laying the groundwork for
-breakthrough solutions.
-            </ListItem>
-            <ListItem title="Bespoke Software & Digital Solutions">
-            Our expert team crafts compelling websites, custom applications, and robust
-digital platforms that elevate your brand, streamline operations, and keep you
-ahead of the competition.
-            </ListItem>
-            <ListItem title="Strategic Consultancy & Business Support">
-              Through tailored insights and hands-on guidance, we optimize performance,
-solve complex challenges, and help you build a resilient roadmap for
-sustainable growth.
-            </ListItem>
-            <ListItem title="Venture Incubation & Innovation">
-              We nurture high-potential startups with expert mentorship, global
-connections, and access to cutting-edge resources — transforming ambitious
-visions into market-leading ventures.
-            </ListItem>
-          </List>
+          <div className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
+            <FadeIn>
+              <Accordion 
+                items={serviceItems} 
+                allowMultiple={true} 
+                className="bg-white rounded-2xl shadow-sm"
+              />
+            </FadeIn>
+          </div>
         </div>
       </Container>
     </>
