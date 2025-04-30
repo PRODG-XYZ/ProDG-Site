@@ -12,9 +12,10 @@ const navigation = [
   {
     title: 'Work',
     links: [
-      { title: 'Community Wolf', href: '/work/community-wolf' },
+      { title: 'Community Wolf', href: '/work/CommunityWolf' },
       { title: 'DealFuze', href: '/work/deal-fuze' },
       { title: 'Renda', href: '/work/renda' },
+      { title: 'Baobab', href: '/work/baobab' },
       {
         title: (
           <>
