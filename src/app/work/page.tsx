@@ -12,14 +12,17 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import { LogoCarousel } from '@/components/ui/logo-carousel'
+import logoDealFuze from '@/images/clients/dealfuze/logo.svg'
+import logoRenda from '@/images/clients/renda/logo.svg'
+import logoCommunityWolf from '@/images/clients/community-wolf/logo.svg'
+import logoCommunityWolfW from '@/images/clients/community-wolf/LogoW.svg'
+import logoKenyaParliament from '@/images/clients/kenya-parliament/Kenya Coat of Arms Official.svg'
+import logoMsingi from '@/images/clients/Msingi/Logo.svg'
+import logoWordAndLearn from '@/images/clients/wordandlearn/WordandLearn Logo.svg'
+import logoNigeria from '@/images/clients/nigeria/Coat of Arms Nigeria.svg'
+import logoStorefront from '@/images/clients/Storefront/Logo.svg'
+import logoBaobab from '@/images/clients/baobab/logo.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -98,15 +101,16 @@ function CaseStudies({
   )
 }
 
-const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+const clientLogos = [
+  { name: 'DealFuze', id: 1, src: logoDealFuze },
+  { name: 'Renda', id: 2, src: logoRenda },
+  { name: 'Community Wolf', id: 3, src: logoCommunityWolfW },
+  { name: 'Baobab', id: 4, src: logoBaobab },
+  { name: 'Kenya Parliament', id: 5, src: logoKenyaParliament },
+  { name: 'Msingi', id: 6, src: logoMsingi },
+  { name: 'Word and Learn', id: 7, src: logoWordAndLearn },
+  { name: 'Nigeria', id: 8, src: logoNigeria },
+  { name: 'Storefront', id: 9, src: logoStorefront }
 ]
 
 function Clients() {
@@ -114,26 +118,12 @@ function Clients() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You're in good company
+          Trusted by Leading Organizations
         </h2>
       </FadeIn>
-      <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
-        <ul
-          role="list"
-          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
-        >
-          {clients.map(([client, logo]) => (
-            <li key={client} className="group">
-              <FadeIn className="overflow-hidden">
-                <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
-                </Border>
-              </FadeIn>
-            </li>
-          ))}
-        </ul>
-      </FadeInStagger>
+      <div className="mt-10">
+        <LogoCarousel logos={clientLogos} columnCount={4} />
+      </div>
     </Container>
   )
 }
@@ -158,17 +148,16 @@ export default async function Work() {
         </p>
       </PageIntro>
 
-      {/* <CaseStudies caseStudies={caseStudies} /> */}
+      <CaseStudies caseStudies={caseStudies} />
 
-      {/* <Testimonial
+      <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
+        client={{ name: 'DealFuze', logo: logoDealFuze }}
       >
-        We approached <em>ProDG Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        The ProDG team delivered an exceptional AI solution that transformed our matching process. Their technical expertise and innovative approach helped us create a platform that truly understands the nuances of investor-founder relationships.
       </Testimonial>
 
-      <Clients /> */}
+      <Clients />
 
       <ContactSection />
     </>

@@ -1,0 +1,58 @@
+import logo from "@/images/clients/baobab/logo.svg"
+import imageHero from "./hero.jpg"
+import imageTestimonial from "./toby-hanington.jpg"
+
+export const caseStudy = {
+  client: "Baobab",
+  title: "Streamlining Founder-Supporter Connections",
+  description:
+    "Baobab is transforming how promising entrepreneurs connect with the right supporters through an intuitive application management platform that eliminates inefficiency and nurtures talent.",
+  summary: [
+    "Connecting founders with the right supporters has traditionally required navigating complex spreadsheets and spending countless hours reviewing applications, creating inefficiencies in the entrepreneurial ecosystem.",
+    "We developed a comprehensive application management platform that streamlines the entire process, enabling efficient submissions, reviews, and management through customizable funnels for different programs and investment categories.",
+  ],
+  logo,
+  image: { src: imageHero },
+  date: "2025-01",
+  service: "Web Development, Application Management, UX Design",
+  testimonial: {
+    author: { name: "Toby Hanington", role: "Founder of Baobab" },
+    content:
+      "ProDG Studio understood our vision from day one. Their team developed a solution that transforms how we discover and nurture entrepreneurial talent across Africa with efficiency and precision.",
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+The art of connecting promising founders with the right supporters has traditionally meant navigating complex spreadsheets and spending countless hours reviewing applications. This inefficient process creates bottlenecks in the entrepreneurial ecosystem, particularly in emerging markets where access to capital and mentorship is already limited. Baobab's mission is to bridge this gap by creating a streamlined application management platform that transforms how organizations discover and nurture entrepreneurial talent.
+
+By partnering with ProDG Studio, Baobab has created an intuitive platform that enables supporters to efficiently review, sort, and manage applicants while providing founders with a seamless application experience. The platform has already facilitated connections for over 500 founders across 5 African countries, resulting in more than $25 million in investments and support.
+
+## What we did
+
+<TagList>
+  <TagListItem>Application Management Platform</TagListItem>
+  <TagListItem>User Experience Design</TagListItem>
+  <TagListItem>Custom Forms System</TagListItem>
+  <TagListItem>Applicant Tracking Solution</TagListItem>
+  <TagListItem>Data Analytics Dashboard</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: "Toby Hanington", role: "Founder of Baobab" }}
+  image={{ src: imageTestimonial }}
+>
+  ProDG Studio understood our vision from day one. Their team developed a solution that transforms how we discover and nurture entrepreneurial talent across Africa with efficiency and precision.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="500+" label="Founders connected" />
+  <StatListItem value="87%" label="Reduction in review time" />
+  <StatListItem value="63%" label="Increase in application quality" />
+  <StatListItem value="$25M+" label="Investment facilitated" />
+</StatList>

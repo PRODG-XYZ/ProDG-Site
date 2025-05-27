@@ -1,0 +1,155 @@
+import imageAuthor from '@/images/team/arbion-halili.JPG'
+
+export const article = {
+  date: '2025-02-18',
+  title: 'Automation Thoughts - A Three-Axis Model',
+  description:
+    'A comprehensive model for categorizing automation initiatives, helping organizations understand the impact of different types of automation and make strategic decisions.',
+  author: {
+    name: 'Arbion Halili',
+    role: 'Technology Strategist',
+    image: { src: imageAuthor },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+*By Arbion Halili*
+
+This blog post suggests a three-axis model for categorizing automation initiatives. It is meant to help the reader understand the impact of different types of automation on organizations, the space of possible job-altering automation strategies, and the differences between historical trends and modern automation initiatives. It may also aid speculation about future patterns of automation.
+
+## What is Automation?
+
+Let's briefly discuss what distinguishes automation from other forms of technological improvement.
+
+The term **automation** must refer to a technology that independently handles some of the micro‐steps required to complete a task: rather than having humans perform the full series of mental or physical sub-tasks, these steps are organized into whole actions which can be easily delegated to a machine through its interface. If this weren't the case, we'd just be talking about tools.
+
+<TopTip>
+  An automation must abstract over the necessary steps towards task completion, not merely make a task easier or faster to complete.
+</TopTip>
+
+![](./automation-tool.jpg)
+
+This becomes clearer when we consider the case in which a worker uses a hammer to drive nails. Although the use of a hammer aids the process of completing the task, it does not automate the task. This is explained by the fact that the worker must still swing for each nail, controlling direction and force. Therefore, an automation can not merely make a task easier or faster to complete: we must consider the degree to which the technology *abstracts over the necessary steps towards task completion* before concluding that it is an automation.
+
+Automation also implies that, whilst human operators no longer needs to manually perform each step (like calculating each digit in arithmetic), humans must shift to a higher-level role: determining how to operate an interface (like deciding which series of buttons to press on a calculator), checking if outputs make sense (like verifying the calculator's sum), or making judgment calls the system can't handle (like deciding when calculation is needed).
+
+## The Three-Axis Model
+
+The **Three‐Axis Model** primarily applies when a system automates **the primary tasks that define a paid job role**. It is organized around three questions. By concatenating the answers, we can create a "label" for any automation initiative:
+
+![](./three-axis.jpg)
+
+### 1. Ownership: Who builds and controls the system?
+
+- **In‐House:** Internal teams develop it and run it.
+- **Contracted:** An external vendor develops it, then hands it off for the organization to run.
+- **Outsourced:** A third‐party handles both creation and ongoing operations.
+
+### 2. Oversight: How much human oversight is involved in day‐to‐day operation?
+
+- **Manual (Human in the Loop):** A human must explicitly guide or approve major actions.
+- **Supervised (Human on the Loop):** The system runs on its own most of the time; humans monitor and may intervene.
+- **Autonomous (Human out of the Loop):** The system requires minimal or no routine human involvement.
+
+### 3. Workforce Impact: What is the impact on employees who used to do these tasks?
+
+- **Adapt:** The same employees remain but adapt (learn new skills, adjust workflows).
+- **Transform:** The role changes drastically; many current staff are not a good fit, so partial displacement or redeployment occurs.
+- **Remove:** The job is eliminated altogether (the system's automation of core tasks makes the role obsolete).
+
+<TopTip>
+  Example: "In-House, Supervised, Adapt" refers to a system that is built and operated by an internal team, with human oversight required for major actions. The workforce remains, but employees learn new skills and adjust their workflows.
+</TopTip>
+
+## Independence of Axes
+
+For this model to be useful, it is important for the axes to be (mostly) distinct.
+
+As we saw earlier, an automation's interface design directly influences task completion strategies, which in turn determines both the **Workforce Impact** (by dictating skill requirements) and the **Oversight** needed (through the need for human judgment at decision points and the complexity of interventions).
+
+However, these axes remain worth discussing separately:
+
+1. **Ownership** doesn't tightly correlate with **Workforce** changes. An "Outsourced" system could have employees "Adapt" if it only automates minor tasks. Conversely, an "In‐House" system could completely "Remove" roles if it fully automates the core function.
+
+2. **Oversight** doesn't tightly correlate with **Workforce** changes: a non-autonomous automation might be used to adapt, transform, or remove roles.
+
+3. Any degree of **Oversight** can co-occur with any **Ownership** model.
+
+Therefore, there are twenty-seven possible automation profiles in this model.
+
+## Why This Model Is Useful
+
+This model provides a framework for analyzing automation initiatives and making strategic decisions:
+
+1. **Clarifies Discussions:** By separating "extent of automation" into distinct components (Oversight and Workforce Impact), we avoid conflating different aspects of automation.
+
+2. **Connects Interface Design to Outcomes:** There is a clear relationship between how the automation works and its impact on oversight requirements and workforce changes.
+
+3. **Practical Decision-Making:** The Ownership axis provides organizations with concrete choices for pursuing automation while considering trade-offs between control, cost, and dependence on external vendors.
+
+![](./decision-matrix.jpg)
+
+## A Historical Overview of Automation (1985–2025)
+
+The evolution of work automation from 1985 to 2025 can be understood through the Three-Axis Model, showing how organizations chose to **own** their automation initiatives, balanced the need for human **oversight**, and managed **workforce impacts**.
+
+### 1985-1995: Early Robotics and Office Computing
+
+- **Ownership:** Primarily In-House and Contracted in manufacturing
+- **Oversight:** Mostly Manual to Supervised, with few truly Autonomous systems
+- **Workforce Impact:** Japanese companies favored Adapt, while American manufacturers often Remove
+
+### 1995-2005: Enterprise Software and Internet Revolution
+
+- **Ownership:** ERP systems were typically Contracted, with some In-House development
+- **Oversight:** Generally Supervised for routine transactions
+- **Workforce Impact:** Often Transform through Business Process Reengineering, with cultural differences between regions
+
+### 2005-2015: Smart Factories and Machine Learning
+
+- **Ownership:** Combination of In-House software with Contracted hardware
+- **Oversight:** "Human on the loop" (Supervised) became common
+- **Workforce Impact:** Varied widely based on regional labor practices
+
+### 2015-2025: AI Revolution and Deep Learning
+
+- **Ownership:** Shift towards Outsourced AI-as-a-service models
+- **Oversight:** Despite technical capabilities, regulatory and liability concerns kept most systems in Supervised mode
+- **Workforce Impact:** Widespread transformation of knowledge work, with cultural differences in approach
+
+Throughout these decades, recurring strategic themes emerged:
+- **Ownership** decisions balanced development costs against control
+- **Oversight** remained vital as even advanced systems required human intervention
+- **Workforce Impact** was shaped by organizational culture, regulations, and strategic priorities
+
+In summary, automation decisions have never been determined solely by technology capabilities, but by broader organizational, cultural, and regulatory frameworks that continue to shape how work evolves in the face of advancing automation.
+
+## About the Author
+
+<div className="flex items-start gap-6 mt-8">
+  <img 
+    src={imageAuthor.src} 
+    alt="Arbion Halili" 
+    className="w-32 h-32 rounded-xl object-cover"
+  />
+  <div>
+    <h3 className="font-display font-semibold text-xl text-neutral-950">Arbion Halili</h3>
+    <p className="text-sm text-neutral-600 mb-4">Founder, Veracity Labs</p>
+    
+    <p className="mb-4">I founded Veracity Labs Limited, a start-up that creates truth-telling technologies, in 2024. Veracity Labs aims to make all authentic recordings (such as real pictures) easy to distinguish from fraudulent material.</p>
+    
+    <p className="mb-4">Veracity Labs's first product was See3, software for taking pictures which encodes evidence of its origin into its metadata. This was initially created to help SMEs combat deepfake-related fraud. If it interests you, you should visit our website.</p>
+    
+    <p className="mb-4">We're currently helping a spinoff from The University of Oxford develop truth-telling scientific measurement devices.</p>
+    
+    <h4 className="font-semibold text-md mb-2 mt-6">Other Truth-Related Projects</h4>
+    <p className="mb-4">I'll release further details soon.</p>
+    
+    <h4 className="font-semibold text-md mb-2 mt-6">Background Information</h4>
+    <p>I was born in London. I was raised in North-West London. I studied BA Economics and Philosophy (PPE) at Brasenose College (The University Of Oxford) between 2022 and 2025. The excellent people at HomeDAO accepted me as a member in 2023.</p>
+  </div>
+</div> 
