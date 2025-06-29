@@ -1,0 +1,57 @@
+import logo from "@/images/clients/renda/logo.svg"
+import imageHero from "./hero.jpg"
+import imageTomFairburn from "./tom-fairburn.jpg"
+
+export const caseStudy = {
+  client: "Renda",
+  title: "The Future of Generative Commerce",
+  description:
+    "Renda AI revolutionizes interior design by generating realistic room renderings with shoppable products, bridging the gap between inspiration and implementation.",
+  summary: [
+    "Envisioning your dream interior can be overwhelming—scrolling through countless images that don't match your vision, then struggling to find the actual products. Renda AI solves this by generating realistic renderings with real, purchasable products.",
+    "We developed a sophisticated platform that integrates generative AI with product data, transforming simple text prompts into stunning interior visualizations complete with ready-to-shop product baskets in seconds.",
+  ],
+  logo,
+  image: { src: imageHero },
+  date: "2025-03",
+  service: "AI Integration, Web Development",
+  testimonial: {
+    author: { name: "Tom Fairburn", role: "Co-founder of Renda" },
+    content:
+      "The ProDG team brilliantly brought our vision to life. Their expertise in AI integration and web development has created a platform that's changing how people shop for interiors.",
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+Envisioning your dream bathroom, you scroll through Pinterest, TikTok and Google to find inspiration. After sifting through hundreds of images that just don't quite match your vision, you finally discover the perfect bathroom design. Only problem- where do you even start looking for the products that bring it life? With countless brands, styles, and price points, the search can quickly become overwhelming. That's why Renda AI has partnered with us to develop an intelligent solution that generates realistic renderings with real products, helping you visualize your dream interior and have instant access to the items that make it a reality.
+
+We developed the Renda AI platform, integrating generative AI with real product data that transforms a prompt into stunning, realistic interior visualisations complete with ready-to-shop product baskets. In just seconds, users can watch one simple prompt transform into a collection of curated interiors that you won't even believe aren't real. Try it yourself at renda.app.
+
+## What we did
+
+<TagList>
+  <TagListItem>Next.js Frontend</TagListItem>
+  <TagListItem>Django Backend</TagListItem>
+  <TagListItem>AI Integration</TagListItem>
+  <TagListItem>Server Deployment</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: "Tom Fairburn", role: "Co-founder of Renda" }}
+  image={{ src: imageTomFairburn }}
+>
+  The ProDG team brilliantly brought our vision to life. Their expertise in AI integration and web development has created a platform that's changing how people shop for interiors.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="8s" label="Average rendering time" />
+  <StatListItem value="92%" label="Product match accuracy" />
+  <StatListItem value="45%" label="Conversion rate increase" />
+  <StatListItem value="10K+" label="Daily renders" />
+</StatList>

@@ -1,0 +1,60 @@
+//DealFuze case study
+
+import logo from '@/images/clients/dealfuze/logo.svg'
+import imageHero from './hero.jpg'
+import imageMohamed from './mohamed-hassan-al-sheraie.jpg'
+
+export const caseStudy = {
+  client: 'DealFuze',
+  title: 'Automating Investor-Founder Matching',
+  description:
+    'DealFuze revolutionizes deal sourcing by automating investor-founder matching. Our AI-driven solution transforms the process by combining quantitative metrics with qualitative personality insights for optimal funding outcomes.',
+  summary: [
+    'The art of investor-founder matching traditionally involves endless spreadsheets and countless hours spent finding the perfect fit. DealFuze eliminates this inefficiency with an AI-powered matching algorithm that evaluates not just industry and investment preferences, but also personality alignment.',
+    'We built a seamless solution featuring a Remix frontend, Express Typescript backend, and MongoDB to integrate effortlessly with existing workflows, acting as a fractional investment analyst to drive successful funding opportunities.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2025-02',
+  service: 'AI Integration, Web Development',
+  testimonial: {
+    author: { name: 'Mohamed Hassan Al Sheraie', role: 'CEO of DealFuze' },
+    content:
+      'The ProDG team delivered an exceptional AI solution that transformed our matching process. Their technical expertise and innovative approach helped us create a platform that truly understands the nuances of investor-founder relationships.',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Case Study`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+The art of investor-founder matching comes with endless spreadsheets and countless hours spent trying to find the perfect fit. It's not just about industry, company stage or investor involvement but also if the party's personalities align. We were approached by DealFuze to partner and create a solution to this problem by crafting a product that acts as a fractional investment analyst, with the goal of automating the deal sourcing pipeline by optimising investor-founder fits to drive successful funding opportunities.
+
+The core of the solution is a matching algorithm that is powered by AI. We wanted the product to be as frictionless as possible to integrate into existing workflows, and also assist in data sourcing and profiling. Each founder and investor is mathematically compared on factors such as industry, experience or investment preferences, and this decision is supplemented by a personality profile generated for each person. The personality profile is AI-engineered through analysing their LinkedIn activity and the responses they provide in their DealFuze profile, enhancing decision-making by combining quantitative analysis with qualitative behavioral insights.
+
+## What we did
+
+<TagList>
+  <TagListItem>Remix Frontend</TagListItem>
+  <TagListItem>Express Typescript Backend</TagListItem>
+  <TagListItem>MongoDB</TagListItem>
+  <TagListItem>AI Matching Algorithm</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: 'Mohamed Ahmed', role: 'CTO of DealFuze' }}
+  image={{ src: imageMohamed }}
+>
+  The ProDG team delivered an exceptional AI solution that transformed our matching process. Their technical expertise and innovative approach helped us create a platform that truly understands the nuances of investor-founder relationships.
+</Blockquote>
+
+
+<StatList>
+  <StatListItem value="50%" label="Reduction in manual matching time" />
+  <StatListItem value="3x" label="Increase in successful funding matches" />
+  <StatListItem value="40%" label="Decrease in administrative overhead" />
+  <StatListItem value="$2.5M" label="Funding accelerated" />
+</StatList>
