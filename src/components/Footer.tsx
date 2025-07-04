@@ -33,6 +33,7 @@ const navigation = [
       { title: 'Process', href: '/process' },
       // { title: 'Blog', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
+      { title: 'Privacy Policy', href: '/policy' },
     ],
   },
   {
